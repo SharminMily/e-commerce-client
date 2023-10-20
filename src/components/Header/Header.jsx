@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {   
@@ -23,8 +24,8 @@ const Header = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <h1>E-Commerce</h1>
-                <a className=" "><img className="w-32 text-blue-900" src="" alt="" /></a>
+                
+                <a className=""><img className="w-32 text-blue-900" src="https://i.ibb.co/SRT8dqF/logo2-removebg-preview.png" alt="" /></a>
 
             </div>
             <div className="navbar-center hidden lg:flex">
