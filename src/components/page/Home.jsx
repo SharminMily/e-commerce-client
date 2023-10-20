@@ -4,10 +4,11 @@ import Benefit from "../Benefit/Benefit";
 
 import Footer from "../Footer/Footer";
 import Product from "../Product";
+import MoreDetails from "../MoreDetails/MoreDetails";
 
 const Home = () => {
     const products = useLoaderData();
-    console.log(products)
+    // console.log(products)
     return (
         <div>
 
@@ -22,6 +23,7 @@ const Home = () => {
             </div>
 
             <Benefit></Benefit>
+            <MoreDetails></MoreDetails>
 
             <Footer></Footer>
         </div>

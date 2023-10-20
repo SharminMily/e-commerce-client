@@ -11,6 +11,7 @@ import Home from './components/page/Home.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import ProductDetails from './components/page/ProductDetails.jsx';
 import Product from './components/Product.jsx';
+import AddProduct from './components/page/AddProduct.jsx';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         element: <Product></Product>,
         // loader: () => fetch('http://localhost:5000/category')
         
+      },
+      {
+        path: '/addProduct',
+        element: <AddProduct></AddProduct>,
       },
       {
         path: '/productDetails',
