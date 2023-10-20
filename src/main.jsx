@@ -13,6 +13,10 @@ import ProductDetails from './components/page/ProductDetails.jsx';
 import Product from './components/Product.jsx';
 import AddProduct from './components/page/AddProduct.jsx';
 
+import AuthProvider from './components/Provider/AuthProvider.jsx';
+import SingUp from './components/Provider/singup.jsx';
+import SingIn from './components/Provider/Singin.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -29,7 +33,7 @@ const router = createBrowserRouter([
         path: '/product',
         element: <Product></Product>,
         // loader: () => fetch('http://localhost:5000/category')
-        
+
       },
       {
         path: '/addProduct',
@@ -39,12 +43,23 @@ const router = createBrowserRouter([
         path: '/productDetails',
         element: <ProductDetails></ProductDetails>
       },
+      {
+        path: '/singUp',
+        element: <SingUp></SingUp>
+      },
+      {
+        path: '/singIn',
+        element: <SingIn></SingIn>
+      },
+
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
       <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
