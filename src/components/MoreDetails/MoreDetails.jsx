@@ -13,28 +13,28 @@ const MoreDetails = () => {
                         <div className="collapse collapse-arrow join-item border border-base-300">
                             <input type="radio" name="my-accordion-4" checked="checked" />
                             <div className="collapse-title text-xl font-medium">
-                                Click to open this one and close others
+                                E-commerce is synonymous with convenience
                             </div>
                             <div className="collapse-content">
-                                <p>hello</p>
+                                <p>Consumers can shop for products and services from the comfort of their own homes, avoiding the hassle of driving to physical stores, finding parking, and waiting in long checkout lines. Moreover, e-commerce stores are open 24/7, allowing people to make purchases at any time that suits them.</p>
                             </div>
                         </div>
                         <div className="collapse collapse-arrow join-item border border-base-300">
                             <input type="radio" name="my-accordion-4" />
                             <div className="collapse-title text-xl font-medium">
-                                Click to open this one and close others
+                                E-commerce opens up a world of products.
                             </div>
                             <div className="collapse-content">
-                                <p>hello</p>
+                                <p>Consumers can access items from all over the world, which may not be available in local stores.</p>
                             </div>
                         </div>
                         <div className="collapse collapse-arrow join-item border border-base-300">
                             <input type="radio" name="my-accordion-4" />
                             <div className="collapse-title text-xl font-medium">
-                                Click to open this one and close others
+                                E-commerce allows for detailed tracking of customer behavior.
                             </div>
                             <div className="collapse-content">
-                                <p>hello</p>
+                                <p> Retailers can see what products are popular, where customers are coming from, and much more. This data can be used to make informed business decisions.</p>
                             </div>
                         </div>
                     </div>
