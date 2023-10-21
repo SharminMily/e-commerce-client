@@ -1,8 +1,12 @@
 /* eslint-disable react/no-unknown-property */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Header = () => {
+
+    const { user, logOut} = useContext(AuthContext)
+    console.log(user)
 
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
     
@@ -64,8 +68,8 @@ const Header = () => {
 
                         </label>
                     </div>
-                    <Link to="/singUp"><a className="btn">SingUp</a></Link>
-                    {/* {
+                    {/* <Link to="/singUp"><a className="btn">SingUp</a></Link> */}
+                    {
                     user?.email ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
@@ -85,8 +89,8 @@ const Header = () => {
                         </ul>
                     </div>
                         :
-                        <Link to="/register"><a className="btn">register</a></Link>
-                } */}
+                        <Link to="/singIn"><a className="btn">register</a></Link>
+                }
                 </div>
             </div>
         </div>

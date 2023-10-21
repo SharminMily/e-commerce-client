@@ -4,10 +4,10 @@ import { useLoaderData } from "react-router-dom";
 const MyCart = () => {
     const product = useLoaderData()
     console.log(product)
-    
+
     const { _id, image, price, rating, title, views, details, category, brand_name } = product;
     return (
-        <div className="m-32">
+        <div className="lg:m-32 m-10">
           
             
           <div className=" card card-side bg-base-100 shadow-xl">
@@ -19,8 +19,8 @@ const MyCart = () => {
                         <p className="font-semibold">{title}</p>
                         <p className="font-semibold">Price: ${price}</p>
                         <p className="font-semibold">
-                            <div className="flex items-center gap-[2px] text-red-700">
-                            <p className="font-normal text-black">{details}</p>
+                            <div className="flex items-center gap-[2px] ">
+                            <p className="font-normal ">{details}</p>
                                
                             </div>
                         </p>

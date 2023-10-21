@@ -5,16 +5,20 @@ import { AuthContext } from "./AuthProvider";
 const SocialLogin = () => {
     const {googleLogin} = useContext(AuthContext);
 
-    const handleSocialLogin = (media) => {
+    const handleGoogle = (media) => {  
         media()
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+        .then(res => console.log(res))       
+            // console.log("res.user")
+        .catch(err => console.log(err))    
+        
     }
 
     return (
         <div>
-            <div className="text-start">
-            <button onClick={() => handleSocialLogin (googleLogin)} className="btn hover:bg-orange-600 bg-black text-white">GOOGLE</button>
+                <div className="divider">continue with</div>
+            <div className="">
+                <button onClick={() => handleGoogle (googleLogin)} className="btn btn-neutral btn-sm">Google</button>
+                {/* <button onClick={() => handleSocialLogin(githubLogin)} className="btn btn-neutral btn-sm">Github</button> */}
             </div>
         </div>
     );

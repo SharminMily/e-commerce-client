@@ -19,6 +19,7 @@ import SingIn from './components/Provider/Singin.jsx';
 import AddCard from './components/page/addCard.jsx';
 import MyCart from './components/page/MyCart.jsx';
 import UpdateProduct from './components/page/UpdateProduct.jsx';
+import PrivateRouter from './components/Provider/PrivateRouter.jsx';
 
 
 const router = createBrowserRouter([
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/myCart/:id',
-        element: <MyCart></MyCart>,
+        element: <PrivateRouter><MyCart></MyCart></PrivateRouter>,
         loader: ({ params }) => fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/allData/${params.id}`)
 
       },
