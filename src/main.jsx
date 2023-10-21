@@ -16,6 +16,9 @@ import AddProduct from './components/page/AddProduct.jsx';
 import AuthProvider from './components/Provider/AuthProvider.jsx';
 import SingUp from './components/Provider/singup.jsx';
 import SingIn from './components/Provider/Singin.jsx';
+import AddCard from './components/page/addCard.jsx';
+import MyCart from './components/page/MyCart.jsx';
+import UpdateProduct from './components/page/UpdateProduct.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,11 +39,28 @@ const router = createBrowserRouter([
       {
         path: '/addProduct',
         element: <AddProduct></AddProduct>,
-        
+
       },
+      {
+        path: '/addCard',
+        element: <AddCard></AddCard>,
+
+      },
+      {
+        path: '/myCart/:id',
+        element:<MyCart></MyCart>,
+        loader: ({params})=> fetch(`http://localhost:5000/allData/${params.id}`)
+
+      },
+
       {
         path: '/productDetails',
         element: <ProductDetails></ProductDetails>
+      },
+      {
+        path: '/updateProduct/:id',
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params})=> fetch(`http://localhost:5000/allData/${params.id}`)
       },
       {
         path: '/singUp',

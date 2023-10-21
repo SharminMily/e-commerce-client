@@ -27,7 +27,7 @@ const Header = () => {
             <li className="font-bold text-orange-600"><NavLink to="/">Home</NavLink></li>
             <li className="font-bold text-orange-600"><NavLink to="/addProduct">Add Product</NavLink></li>
             <li className="font-bold text-orange-600"><NavLink to="/myCart">My Cart</NavLink></li>
-            <li className="font-bold text-orange-600"><NavLink to="/productDetails">Product Details</NavLink></li>
+            <li className="font-bold text-orange-600"><NavLink to="/updateProduct">Update Product</NavLink></li>
             {/* <li className="font-bold text-orange-600"><NavLink to="/blog">Blog</NavLink></li> */}
             {/* <li><NavLink to="/"></NavLink></li> */}
         </>

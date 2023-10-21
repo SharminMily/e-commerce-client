@@ -1,6 +1,17 @@
+import { useEffect, useState } from "react";
+import AddCard from "./addCard";
 
 
 const AddProduct = () => {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/alldata')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, []);
+
     return (
         <div>
             {/* banner */}
@@ -62,7 +73,12 @@ const AddProduct = () => {
             <div className="my-10">
                 <h2 className="py-4 text-3xl text-orange-600 font-serif font-bold">added Product</h2>
             </div>
-            
+            <div className="grid lg:grid-cols-2 gap-4">
+                {
+                    products.map(product => <AddCard key={product._id} product={product}></AddCard>)
+                }
+            </div>
+
 
         </div>
     );

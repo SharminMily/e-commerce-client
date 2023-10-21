@@ -20,9 +20,9 @@ const Home = () => {
         <div>
 
             <Banner></Banner>
-            <div className="my-10 mt-16">
+            <div className="my-10 lg:mt-16 md:32 mt-48">
                 <h1 className="text-4xl font-bold">Our <span className="text-orange-600">E-Commerce</span> site</h1>
-                <div className="flex gap-2  justify-evenly">
+                <div className="md:flex flex-row gap-2  justify-evenly">
                     {
                         categories.map(category => <Product key={category._id} category={category}></Product>)
                     }

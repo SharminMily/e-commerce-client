@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
+import SocialLogin from "./SocialLogin";
+
 
 const SingUp = () => {
 
@@ -49,6 +51,8 @@ const SingUp = () => {
 
     }
 
+   
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -77,6 +81,7 @@ const SingUp = () => {
                                 <button className="btn bg-orange-600 text-white normal-case hover:bg-black">SingUp</button>
                             </div>
                         </form>
+                        <SocialLogin />
                     </div>
                 </div>
             </div>

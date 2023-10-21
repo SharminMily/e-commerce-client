@@ -6,7 +6,7 @@ const MoreDetails = () => {
 
             <div className="md:flex my-8 flex-row justify-center w-full h-[100%] bg-gray-200">
                 <div className="w-full">
-                    <img className="w-full" src="https://i.ibb.co/JvgczhP/banner2.png" alt="" />
+                    <img className="w-full h-full" src="https://i.ibb.co/JvgczhP/banner2.png" alt="" />
                 </div>
                 <div className="bg-orange-600 w-full text-white">
                     <div className="join join-vertical w-full">
