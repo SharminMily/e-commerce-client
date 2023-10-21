@@ -62,6 +62,7 @@ const AddProduct = () => {
             <div className="my-10">
                 <h2 className="py-4 text-3xl text-orange-600 font-serif font-bold">added Product</h2>
             </div>
+            
 
         </div>
     );
