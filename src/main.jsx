@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-       
+
       },
       {
         path: '/product',
@@ -48,8 +48,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/myCart/:id',
-        element:<MyCart></MyCart>,
-        loader: ({params})=> fetch(`http://localhost:5000/allData/${params.id}`)
+        element: <MyCart></MyCart>,
+        loader: ({ params }) => fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/allData/${params.id}`)
 
       },
 
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: '/updateProduct/:id',
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({params})=> fetch(`http://localhost:5000/allData/${params.id}`)
+        loader: ({ params }) => fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/allData/${params.id}`)
       },
       {
         path: '/singUp',

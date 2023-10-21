@@ -22,7 +22,7 @@ const SingUp = () => {
             const user = {email, createdAt: createAt}
 
             // const user = {email, password};
-            fetch('http://localhost:5000/user',{
+            fetch('https://e-commerce-server-bbmemffin-sharminmily.vercel.app/user',{
                 method: 'POST',
                 headers: {
                     'content-type' : 'application/json'

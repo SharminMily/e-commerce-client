@@ -1,19 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import {BsStarFill, BsStarHalf, BsEyeFill } from "react-icons/bs";
-import {MdDeleteForever } from "react-icons/md";
-import {BiEditAlt } from "react-icons/bi";
+import { BsStarFill, BsStarHalf, BsEyeFill } from "react-icons/bs";
+import { MdDeleteForever } from "react-icons/md";
+import { BiEditAlt } from "react-icons/bi";
 import Swal from 'sweetalert2'
 
 
 const AddCard = ({ product }) => {
-    
+
     const { _id, image, price, rating, title, views, details, category, brand_name } = product;
     // console.log(product)
 
-    const handleDelete = _id =>{
-        console.log( _id,'hello');
+    const handleDelete = _id => {
+        console.log(_id, 'hello');
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to delete this!",
@@ -22,33 +22,33 @@ const AddCard = ({ product }) => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-     
-            fetch(`http://localhost:5000/alldata/${_id}`,{
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if(data.deletedCount > 0){
-                    Swal.fire(
-                    'Deleted!',
-                    'Your Product has been deleted.',
-                    'success'
-              )
-                }
-            })
 
-            console.log('deleted')
+                fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/alldata/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Product has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+
+                console.log('deleted')
 
             }
-          })
+        })
 
     }
-        
 
-  
+
+
 
 
     return (
@@ -63,11 +63,11 @@ const AddCard = ({ product }) => {
                         <p className="font-semibold">Price: ${price}</p>
                         <p className="font-semibold">
                             <div className="flex items-center gap-[2px] text-red-700">
-                            <p className="font-bold text-xl">{rating}</p>
-                                <BsStarFill className="text-xl"/>
-                                <BsStarFill className="text-xl"/>
-                                <BsStarFill className="text-xl"/>
-                                <BsStarHalf className="text-xl"/>
+                                <p className="font-bold text-xl">{rating}</p>
+                                <BsStarFill className="text-xl" />
+                                <BsStarFill className="text-xl" />
+                                <BsStarFill className="text-xl" />
+                                <BsStarHalf className="text-xl" />
                             </div>
                         </p>
                         {/* details button */}
@@ -80,12 +80,12 @@ const AddCard = ({ product }) => {
                                     <BiEditAlt />
                                 </button>
                             </Link>
-                            <button onClick={() => handleDelete (_id)}
+                            <button onClick={() => handleDelete(_id)}
                                 className="btn bg-red-700 text-white rounded-xl hover:bg-black">
-                                <MdDeleteForever className="text-2xl"/>
+                                <MdDeleteForever className="text-2xl" />
                             </button>
                             <button className="btn">
-                               <BsEyeFill className="text-2xl"/>
+                                <BsEyeFill className="text-2xl" />
                             </button>
 
 

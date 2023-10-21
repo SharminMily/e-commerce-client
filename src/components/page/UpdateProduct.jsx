@@ -15,7 +15,7 @@ const UpdateProduct = () => {
         const form = event.target;
 
         const name = form.name.value;
-        const quantity = form.quantity.value;      
+        const quantity = form.quantity.value;
         const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
@@ -25,7 +25,7 @@ const UpdateProduct = () => {
         console.log(UpdateProduct);
 
         // send data to the server
-        fetch(`http://localhost:5000/allData/${_id}`, {
+        fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/allData/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const UpdateProduct = () => {
                         text: 'product Update Successfully',
                         icon: 'success',
                         confirmButtonText: 'Added'
-                      
+
                     })
             })
 
@@ -50,7 +50,7 @@ const UpdateProduct = () => {
 
 
     return (
-        <div>     
+        <div>
 
             <div className="bg-[#F4F3F0] p-20">
                 <h2 className="text-3xl font-extrabold mb-6">Update Product: <span className="text-orange-600">{brand_name}</span></h2>
@@ -74,7 +74,7 @@ const UpdateProduct = () => {
                             </label>
                         </div>
                     </div>
-                 
+
                     {/* form category and details row */}
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
