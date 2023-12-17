@@ -48,20 +48,20 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/myCart/:id',
+        path: 'myCart/:id',
         element: <PrivateRouter><MyCart></MyCart></PrivateRouter>,
-        loader: ({ params }) => fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/allData/${params.id}`)
+        loader: ({ params }) => fetch(`https://e-commerce-server-sigma.vercel.app/allData/${params.id}`)
 
       },
 
       {
-        path: '/productDetails',
+        path: 'productDetails',
         element: <ProductDetails></ProductDetails>
       },
       {
-        path: '/updateProduct/:id',
-        element: <UpdateProduct></UpdateProduct>,
-        loader: ({ params }) => fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/allData/${params.id}`)
+        path: 'updateProduct/:id',
+        element: <PrivateRouter><UpdateProduct></UpdateProduct></PrivateRouter>,
+        loader: ({ params }) => fetch(`https://e-commerce-server-sigma.vercel.app/allData/${params.id}`)
       },
       {
         path: '/singUp',

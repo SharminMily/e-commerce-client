@@ -5,22 +5,24 @@ import Footer from "../Footer/Footer";
 import Product from "../Product";
 import MoreDetails from "../MoreDetails/MoreDetails";
 import { useEffect, useState } from "react";
+import AddProduct from "../AddProducts/AddProduct";
 
 const Home = () => {
 
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('https://e-commerce-server-bbmemffin-sharminmily.vercel.app/category')
-            .then(res => res.json())
-            .then(data => setCategories(data))
+        fetch('https://e-commerce-server-sigma.vercel.app/category')
+                .then(res => res.json())
+                .then(data => setCategories(data))
     }, []);
 
     return (
         <div>
-
             <Banner></Banner>
-            <div className="my-10 lg:mt-16 md:32 mt-48">
+            <AddProduct></AddProduct>
+
+            <div className="my-10 lg:mt-16 md:32 mt-8">
                 <h1 className="text-4xl font-bold">Our <span className="text-orange-600">E-Commerce</span> site</h1>
                 <div className="md:flex flex-row gap-2  justify-evenly">
                     {

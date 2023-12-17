@@ -7,9 +7,9 @@ const AddProduct = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://e-commerce-server-bbmemffin-sharminmily.vercel.app/alldata')
-            .then(res => res.json())
-            .then(data => setProducts(data))
+        fetch('https://e-commerce-server-sigma.vercel.app/alldata')
+                .then(res => res.json())
+                .then(data => setProducts(data))
     }, []);
 
     return (

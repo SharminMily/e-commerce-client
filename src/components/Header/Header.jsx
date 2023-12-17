@@ -28,10 +28,10 @@ const Header = () => {
 
     const navLinks = (
         <>
-            <li className="font-bold text-orange-600"><NavLink to="/">Home</NavLink></li>
-            <li className="font-bold text-orange-600"><NavLink to="/addProduct">Add Product</NavLink></li>
-            <li className="font-bold text-orange-600"><NavLink to="/myCart">My Cart</NavLink></li>
-            <li className="font-bold text-orange-600"><NavLink to="/updateProduct">Update Product</NavLink></li>
+            <li className="font-bold text-orange-600 text-lg"><NavLink to="/">Home</NavLink></li>
+            <li className="font-bold text-orange-600 text-lg"><NavLink to="/addProduct">Add Product</NavLink></li>
+            <li className="font-bold text-orange-600 text-lg"><NavLink to="/myCart">Details</NavLink></li>
+            <li className="font-bold text-orange-600 text-lg"><NavLink to="/updateProduct/:id">Update Product</NavLink></li>
             {/* <li className="font-bold text-orange-600"><NavLink to="/blog">Blog</NavLink></li> */}
             {/* <li><NavLink to="/"></NavLink></li> */}
         </>
@@ -89,7 +89,7 @@ const Header = () => {
                         </ul>
                     </div>
                         :
-                        <Link to="/singIn"><a className="btn">register</a></Link>
+                        <Link to="/singIn"><a className="btn bg-orange-600 hover:bg-black text-white">register</a></Link>
                 }
                 </div>
             </div>

@@ -25,7 +25,8 @@ const AddCard = ({ product }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://e-commerce-server-bbmemffin-sharminmily.vercel.app/alldata/${_id}`, {
+                fetch(`https://e-commerce-server-sigma.vercel.app
+/alldata/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

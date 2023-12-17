@@ -1,15 +1,15 @@
 /* eslint-disable no-unused-vars */
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const MyCart = () => {
     const product = useLoaderData()
-    console.log(product)
+    // console.log(product)
 
     const { _id, image, price, rating, title, views, details, category, brand_name } = product;
     return (
         <div className="lg:m-32 m-10">
           
-            
+            <Link to="/myCart">
           <div className=" card card-side bg-base-100 shadow-xl">
                 <figure><img className="h-48 w-72 mr-4" src={image} alt="Movie" /></figure>
                 <div className="flex justify-evenly w-full  ">
@@ -24,11 +24,12 @@ const MyCart = () => {
                                
                             </div>
                         </p>
-                        <button className="btn mt-6 normal-case text-xl bg-orange-600 hover:bg-black text-white">Details</button>
+                        <button className="btn mt-6 normal-case text-xl bg-orange-600 hover:bg-black text-white">Add</button>
                     </div>
                      
                 </div>
             </div>
+            </Link>
 
         </div>
     );
